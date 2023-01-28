@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  WorkoutApp
-//
-//  Created by Vladimir Fibe on 1/28/23.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,7 +6,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
