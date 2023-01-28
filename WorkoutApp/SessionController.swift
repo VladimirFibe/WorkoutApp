@@ -3,7 +3,11 @@ import UIKit
 final class SessionController: BaseController {
     private let timerView: BaseInfoView = {
         return $0
-    }(BaseInfoView())
+    }(BaseInfoView(with: "One", buttonTitle: "Two"))
+    
+    @objc func buttonTapped() {
+        print("DEBUG: \(#function)")
+    }
 }
 
 extension SessionController {
@@ -25,7 +29,9 @@ extension SessionController {
     override func configureViews() {
         super.configureViews()
         title = Res.Strings.NavBar.session
+        timerView.addButtonTarget(self, action: #selector(buttonTapped))
         addNavBarButton(at: .left, with: "Pause")
         addNavBarButton(at: .right, with: "Finish")
     }
+
 }

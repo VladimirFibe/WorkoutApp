@@ -7,6 +7,10 @@ class BaseInfoView: BaseView {
         return $0
     }(UILabel())
     
+    private let button: UIButton = {
+        $0.backgroundColor = .red
+        return $0
+    }(UIButton())
     private let contentView: UIView = {
         $0.backgroundColor = .white
         $0.layer.borderColor = Res.Colors.separator.cgColor
@@ -15,14 +19,21 @@ class BaseInfoView: BaseView {
         return $0
     }(UIView())
     
-    init(with title: String? = nil, alignment: NSTextAlignment = .left) {
+    init(with title: String? = nil,
+         buttonTitle: String? = nil) {
         titleLabel.text = title?.uppercased()
-        titleLabel.textAlignment = alignment
+        titleLabel.textAlignment = buttonTitle == nil ? .center : .left
+        button.setTitle(buttonTitle, for: .normal)
+        button.isHidden = buttonTitle == nil
         super.init(frame: .zero)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addButtonTarget(_ target: Any?, action: Selector) {
+        button.addTarget(self, action: action, for: .primaryActionTriggered)
     }
 }
 
@@ -30,6 +41,7 @@ extension BaseInfoView {
     override func setupViews() {
         super.setupViews()
         addView(titleLabel)
+        addView(button)
         addView(contentView)
     }
     
@@ -44,6 +56,11 @@ extension BaseInfoView {
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            
+            trailingAnchor.constraint(equalTo: button.trailingAnchor),
+            button.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+            button.widthAnchor.constraint(equalToConstant: 200),
+            button.heightAnchor.constraint(equalToConstant: 30),
             
             contentView.topAnchor.constraint(equalToSystemSpacingBelow: contentTopAnchor, multiplier: contentTopOffset),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
