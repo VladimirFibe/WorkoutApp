@@ -12,6 +12,7 @@
 		0266E3B32984B6B300209F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3B22984B6B300209F13 /* ViewController.swift */; };
 		0266E3B82984B6B400209F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0266E3B72984B6B400209F13 /* Assets.xcassets */; };
 		0266E3BB2984B6B400209F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0266E3B92984B6B400209F13 /* LaunchScreen.storyboard */; };
+		0266E3E52984BDEF00209F13 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3E42984BDEF00209F13 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		0266E3B72984B6B400209F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0266E3BA2984B6B400209F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0266E3BC2984B6B400209F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0266E3E42984BDEF00209F13 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0266E3E62984C04500209F13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 		0266E3A22984B6B300209F13 = {
 			isa = PBXGroup;
 			children = (
+				0266E3E62984C04500209F13 /* README.md */,
 				0266E3AD2984B6B300209F13 /* WorkoutApp */,
 				0266E3AC2984B6B300209F13 /* Products */,
 			);
@@ -57,6 +61,7 @@
 				0266E3C32984B76C00209F13 /* Application */,
 				0266E3C22984B71400209F13 /* Supporting Files */,
 				0266E3B22984B6B300209F13 /* ViewController.swift */,
+				0266E3E42984BDEF00209F13 /* TabBarController.swift */,
 			);
 			path = WorkoutApp;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0266E3B32984B6B300209F13 /* ViewController.swift in Sources */,
+				0266E3E52984BDEF00209F13 /* TabBarController.swift in Sources */,
 				0266E3AF2984B6B300209F13 /* AppDelegate.swift in Sources */,
 				0266E3B12984B6B300209F13 /* SceneDelegate.swift in Sources */,
 			);
