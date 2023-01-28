@@ -5,14 +5,12 @@ final class SecondaryButton: UIButton {
         $0.textColor = Resources.Colors.active
         $0.font = Resources.Fonts.helveticaRegular(with: 15)
         $0.textAlignment = .center
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
     
     private let icon: UIImageView = {
         $0.image = Resources.Images.Common.downArrow.withRenderingMode(.alwaysTemplate)
         $0.tintColor = Resources.Colors.active
-        $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIImageView())
     
@@ -34,8 +32,8 @@ final class SecondaryButton: UIButton {
 
 private extension SecondaryButton {
     func addViews() {
-        addSubview(label)
-        addSubview(icon)
+        addView(label)
+        addView(icon)
     }
     func layoutViews() {
         NSLayoutConstraint.activate([

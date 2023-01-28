@@ -43,6 +43,7 @@ enum Resources {
         
         enum Common {
             static var downArrow = #imageLiteral(resourceName: "downArrow")
+            static var addButton = #imageLiteral(resourceName: "addButton")
         }
     }
     
