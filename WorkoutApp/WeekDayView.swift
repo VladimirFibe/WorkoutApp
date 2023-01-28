@@ -10,17 +10,17 @@ final class WeekDayView: BaseView {
         let currentDay = startOfWeek.agoForward(to: index)
         let day = Calendar.current.component(.day, from: currentDay)
         let isToday = currentDay.stripTime() == Date().stripTime()
-        backgroundColor = isToday ? Resources.Colors.active : Resources.Colors.background
+        backgroundColor = isToday ? Res.Colors.active : Res.Colors.background
         nameLabel.text = name.uppercased()
-        nameLabel.textColor = isToday ? .white : Resources.Colors.inActive
+        nameLabel.textColor = isToday ? .white : Res.Colors.inActive
         dateLabel.text = String(day)
-        dateLabel.textColor = isToday ? .white : Resources.Colors.inActive
+        dateLabel.textColor = isToday ? .white : Res.Colors.inActive
     }
 }
 
 extension WeekDayView {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         addView(stackView)
     }
     
@@ -37,9 +37,9 @@ extension WeekDayView {
         layer.cornerRadius = 5
         layer.masksToBounds = true
         backgroundColor = .red
-        nameLabel.font = Resources.Fonts.helveticaRegular(with: 9)
+        nameLabel.font = Res.Fonts.helveticaRegular(with: 9)
         nameLabel.textAlignment = .center
-        dateLabel.font = Resources.Fonts.helveticaRegular(with: 15)
+        dateLabel.font = Res.Fonts.helveticaRegular(with: 15)
         dateLabel.textAlignment = .center
         stackView.spacing = 3
         stackView.axis = .vertical

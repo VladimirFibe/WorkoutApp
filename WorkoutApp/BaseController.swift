@@ -7,17 +7,17 @@ enum NavBarPosition {
 class BaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        addViews()
+        setupViews()
         layoutViews()
         configureViews()
     }
 }
 
 @objc extension BaseController {
-    func addViews() {}
+    func setupViews() {}
     func layoutViews() {}
     func configureViews() {
-        view.backgroundColor = Resources.Colors.background
+        view.backgroundColor = Res.Colors.background
     }
     func navBarLeftButtonHandler() {}
     func navBarRightButtonHandler() {}
@@ -27,9 +27,9 @@ extension BaseController {
     func addNavBarButton(at position: NavBarPosition, with title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
-        button.setTitleColor(Resources.Colors.active, for: .normal)
-        button.setTitleColor(Resources.Colors.inActive, for: .disabled)
-        button.titleLabel?.font = Resources.Fonts.helveticaRegular(with: 17)
+        button.setTitleColor(Res.Colors.active, for: .normal)
+        button.setTitleColor(Res.Colors.inActive, for: .disabled)
+        button.titleLabel?.font = Res.Fonts.helveticaRegular(with: 17)
         
         switch position {
         case .left:

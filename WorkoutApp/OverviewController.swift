@@ -11,8 +11,8 @@ final class OverviewController: BaseController {
 }
 
 extension OverviewController {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         view.addView(navBar)
     }
     

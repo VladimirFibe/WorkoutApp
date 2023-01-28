@@ -1,6 +1,6 @@
 import UIKit
 
-enum Resources {
+enum Res {
     enum Colors {
         static var active = UIColor(hex: "#437BFEFF")
         static var inActive = UIColor(hex: "#929DA5FF")
@@ -15,10 +15,14 @@ enum Resources {
     
     enum Strings {
         enum TabBar {
-            static var overview = "Overview"
-            static var session = "Session"
-            static var progress = "Progress"
-            static var settings = "Settings"
+            static func title(for tab: Tabs) -> String {
+                switch tab {
+                case .overview: return "Overview"
+                case .session : return "Session"
+                case .progress: return "Progress"
+                case .settings: return "Settings"
+                }
+            }
         }
         
         enum NavBar {
@@ -35,10 +39,14 @@ enum Resources {
     
     enum Images {
         enum TabBar {
-            static var overview = #imageLiteral(resourceName: "house")
-            static var session = #imageLiteral(resourceName: "progress")
-            static var progress = #imageLiteral(resourceName: "clock")
-            static var settings = #imageLiteral(resourceName: "gear")
+            static func icon(for tab: Tabs) -> UIImage {
+                switch tab {
+                case .overview: return #imageLiteral(resourceName: "house")
+                case .session : return #imageLiteral(resourceName: "progress")
+                case .progress: return #imageLiteral(resourceName: "clock")
+                case .settings: return #imageLiteral(resourceName: "gear")
+                }
+            }
         }
         
         enum Common {

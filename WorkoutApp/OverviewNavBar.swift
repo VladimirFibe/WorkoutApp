@@ -9,7 +9,7 @@ final class OverviewNavBar: BaseView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        addBottomBorder(with: Resources.Colors.separator, height: 1)
+        addBottomBorder(with: Res.Colors.separator, height: 1)
     }
     func allWorkoutsButtonAction(_ target: Any?, action: Selector) {
         allWorkoutsButton.addTarget(target, action: action, for: .primaryActionTriggered)
@@ -21,8 +21,8 @@ final class OverviewNavBar: BaseView {
 }
 
 extension OverviewNavBar {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         addView(allWorkoutsButton)
         addView(titleLabel)
         addView(addButton)
@@ -60,13 +60,13 @@ extension OverviewNavBar {
         super.configureViews()
         backgroundColor = .white
 
-        titleLabel.text = Resources.Strings.NavBar.overview
-        titleLabel.textColor = Resources.Colors.titleGray
-        titleLabel.font = Resources.Fonts.helveticaRegular(with: 22)
+        titleLabel.text = Res.Strings.NavBar.overview
+        titleLabel.textColor = Res.Colors.titleGray
+        titleLabel.font = Res.Fonts.helveticaRegular(with: 22)
 
-        addButton.setImage(Resources.Images.Common.addButton, for: .normal)
+        addButton.setImage(Res.Images.Common.addButton, for: .normal)
         
-        allWorkoutsButton.setTitle(Resources.Strings.Overview.allWorkoutsButton)
+        allWorkoutsButton.setTitle(Res.Strings.Overview.allWorkoutsButton)
         
     }
 }

@@ -3,7 +3,7 @@ import UIKit
 class BaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addViews()
+        setupViews()
         layoutViews()
         configureViews()
     }
@@ -13,7 +13,7 @@ class BaseView: UIView {
     }
 }
 @objc extension BaseView {
-    func addViews() {}
+    func setupViews() {}
     func layoutViews() {}
     func configureViews() {}
 }

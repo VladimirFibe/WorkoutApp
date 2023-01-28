@@ -13,7 +13,7 @@
 		0266E3BB2984B6B400209F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0266E3B92984B6B400209F13 /* LaunchScreen.storyboard */; };
 		0266E3E52984BDEF00209F13 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3E42984BDEF00209F13 /* TabBarController.swift */; };
 		0266E3EA2984C4A500209F13 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3E92984C4A500209F13 /* UIColor+Extension.swift */; };
-		0266E3EC2984C58000209F13 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3EB2984C58000209F13 /* Resources.swift */; };
+		0266E3EC2984C58000209F13 /* Res.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3EB2984C58000209F13 /* Res.swift */; };
 		0266E3EE2984DBA900209F13 /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3ED2984DBA800209F13 /* NavBarController.swift */; };
 		0266E3F12984DF6600209F13 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3F02984DF6600209F13 /* BaseController.swift */; };
 		0266E3F32984E28100209F13 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3F22984E28100209F13 /* UIView+Extension.swift */; };
@@ -27,6 +27,7 @@
 		0266E40B29851E8C00209F13 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40A29851E8C00209F13 /* WeekView.swift */; };
 		0266E40E2985266D00209F13 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40D2985266D00209F13 /* WeekDayView.swift */; };
 		0266E41029852EEA00209F13 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40F29852EEA00209F13 /* Date+Extension.swift */; };
+		0266E41229856D1B00209F13 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E41129856D1B00209F13 /* BaseInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,7 @@
 		0266E3E42984BDEF00209F13 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0266E3E62984C04500209F13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0266E3E92984C4A500209F13 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		0266E3EB2984C58000209F13 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		0266E3EB2984C58000209F13 /* Res.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Res.swift; sourceTree = "<group>"; };
 		0266E3ED2984DBA800209F13 /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		0266E3F02984DF6600209F13 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		0266E3F22984E28100209F13 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		0266E40A29851E8C00209F13 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0266E40D2985266D00209F13 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		0266E40F29852EEA00209F13 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		0266E41129856D1B00209F13 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0266E3E82984C48B00209F13 /* Extensions */,
-				0266E3EB2984C58000209F13 /* Resources.swift */,
+				0266E3EB2984C58000209F13 /* Res.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -153,6 +155,7 @@
 				0266E3ED2984DBA800209F13 /* NavBarController.swift */,
 				0266E3F02984DF6600209F13 /* BaseController.swift */,
 				0266E408298507BA00209F13 /* BaseView.swift */,
+				0266E41129856D1B00209F13 /* BaseInfoView.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -296,7 +299,8 @@
 				0266E3EE2984DBA900209F13 /* NavBarController.swift in Sources */,
 				0266E3FC2984E5C700209F13 /* ProgressController.swift in Sources */,
 				0266E4052984F5CC00209F13 /* SecondaryButton.swift in Sources */,
-				0266E3EC2984C58000209F13 /* Resources.swift in Sources */,
+				0266E41229856D1B00209F13 /* BaseInfoView.swift in Sources */,
+				0266E3EC2984C58000209F13 /* Res.swift in Sources */,
 				0266E3B12984B6B300209F13 /* SceneDelegate.swift in Sources */,
 				0266E3F12984DF6600209F13 /* BaseController.swift in Sources */,
 				0266E3FA2984E59E00209F13 /* OverviewController.swift in Sources */,

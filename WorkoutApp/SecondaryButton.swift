@@ -2,15 +2,15 @@ import UIKit
 
 final class SecondaryButton: UIButton {
     private let label: UILabel = {
-        $0.textColor = Resources.Colors.active
-        $0.font = Resources.Fonts.helveticaRegular(with: 15)
+        $0.textColor = Res.Colors.active
+        $0.font = Res.Fonts.helveticaRegular(with: 15)
         $0.textAlignment = .center
         return $0
     }(UILabel())
     
     private let icon: UIImageView = {
-        $0.image = Resources.Images.Common.downArrow.withRenderingMode(.alwaysTemplate)
-        $0.tintColor = Resources.Colors.active
+        $0.image = Res.Images.Common.downArrow.withRenderingMode(.alwaysTemplate)
+        $0.tintColor = Res.Colors.active
         return $0
     }(UIImageView())
     
@@ -48,7 +48,7 @@ private extension SecondaryButton {
         ])
     }
     func configure() {
-        backgroundColor = Resources.Colors.secondary
+        backgroundColor = Res.Colors.secondary
         layer.cornerRadius = 14
         translatesAutoresizingMaskIntoConstraints = false
         makeSystem(self)

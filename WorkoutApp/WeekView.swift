@@ -6,8 +6,8 @@ final class WeekView: BaseView {
 }
 
 extension WeekView {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         addView(stackView)
     }
     
