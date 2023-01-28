@@ -5,10 +5,8 @@ final class OverviewNavBar: BaseView {
     private let titleLabel = UILabel()
     private let addButton = UIButton()
     
-    let weekView: UIView = {
-        $0.backgroundColor = .blue.withAlphaComponent(0.2)
-        return $0
-    }(UIView())
+    let weekView = WeekView()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         addBottomBorder(with: Resources.Colors.separator, height: 1)
@@ -49,16 +47,17 @@ extension OverviewNavBar {
             titleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
             allWorkoutsButton.leadingAnchor.constraint(equalToSystemSpacingAfter: titleLabel.trailingAnchor, multiplier: 1),
             
+            
             weekView.topAnchor.constraint(equalToSystemSpacingBelow: allWorkoutsButton.bottomAnchor, multiplier: 1),
-            weekView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            weekView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            weekView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            weekView.heightAnchor.constraint(equalToConstant: 150)
+            weekView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: weekView.trailingAnchor, multiplier: 1),
+            bottomAnchor.constraint(equalToSystemSpacingBelow: weekView.bottomAnchor, multiplier: 1),
+            weekView.heightAnchor.constraint(equalToConstant: 47)
         ])
     }
     
-    override func configure() {
-        super.configure()
+    override func configureViews() {
+        super.configureViews()
         backgroundColor = .white
 
         titleLabel.text = Resources.Strings.NavBar.overview

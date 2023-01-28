@@ -9,14 +9,14 @@ class BaseController: UIViewController {
         super.viewDidLoad()
         addViews()
         layoutViews()
-        configure()
+        configureViews()
     }
 }
 
 @objc extension BaseController {
     func addViews() {}
     func layoutViews() {}
-    func configure() {
+    func configureViews() {
         view.backgroundColor = Resources.Colors.background
     }
     func navBarLeftButtonHandler() {}
