@@ -1,9 +1,8 @@
 import UIKit
 
-final class ViewController: UIViewController {
-
+final class ProgressController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Workout Progress"
     }
 }
-
