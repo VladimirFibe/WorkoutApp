@@ -7,6 +7,8 @@ enum NavBarPosition {
 class BaseController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        addViews()
+        layoutViews()
         configure()
     }
 }
@@ -15,16 +17,10 @@ class BaseController: UIViewController {
     func addViews() {}
     func layoutViews() {}
     func configure() {
-        view.backgroundColor = Resources.Colors.bacground
+        view.backgroundColor = Resources.Colors.background
     }
-    
-    func navBarLeftButtonHandler() {
-        print(#function)
-    }
-    
-    func navBarRightButtonHandler() {
-        print(#function)
-    }
+    func navBarLeftButtonHandler() {}
+    func navBarRightButtonHandler() {}
 }
 
 extension BaseController {
