@@ -25,8 +25,8 @@ extension OverviewController {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         navigationController?.navigationBar.isHidden = true
     }
 }

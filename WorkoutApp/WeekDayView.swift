@@ -32,8 +32,8 @@ extension WeekDayView {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         layer.cornerRadius = 5
         layer.masksToBounds = true
         backgroundColor = .red

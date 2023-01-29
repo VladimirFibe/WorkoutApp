@@ -17,7 +17,7 @@ class WAButton: UIButton {
         self.type = type
         addViews()
         layoutViews()
-        configure()
+        configureAppearance()
     }
     
     required init?(coder: NSCoder) {
@@ -25,7 +25,7 @@ class WAButton: UIButton {
         
         addViews()
         layoutViews()
-        configure()
+        configureAppearance()
     }
     
     func setTitle(_ title: String?) {
@@ -56,7 +56,7 @@ private extension WAButton {
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2 * horisontalOffset)
         ])
     }
-    func configure() {
+    func configureAppearance() {
         label.textAlignment = .center
         switch type {
         case .primary:

@@ -23,8 +23,8 @@ extension WeekView {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         
         var weekdays = Date.calendar.veryShortStandaloneWeekdaySymbols
         

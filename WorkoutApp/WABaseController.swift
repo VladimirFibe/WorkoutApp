@@ -9,14 +9,14 @@ class WABaseController: UIViewController {
         super.viewDidLoad()
         setupViews()
         layoutViews()
-        configureViews()
+        configureAppearance()
     }
 }
 
 @objc extension WABaseController {
     func setupViews() {}
     func layoutViews() {}
-    func configureViews() {
+    func configureAppearance() {
         view.backgroundColor = Res.Colors.background
     }
     func navBarLeftButtonHandler() {}

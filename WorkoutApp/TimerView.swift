@@ -134,8 +134,8 @@ extension TimerView {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
     }
 }
 

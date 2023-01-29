@@ -53,8 +53,8 @@ extension SessionController {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         
         title = Res.Strings.NavBar.session
         navigationController?.tabBarItem.title = Res.Strings.TabBar.title(for: .session)
@@ -63,5 +63,10 @@ extension SessionController {
         addNavBarButton(at: .right, with: Res.Strings.Session.navBarFinish)
         
         timerView.configure(with: timerDuration, progress: 0)
+        
+        statsView.configure(with: [.heartRate("155"),
+                                   .averagePace("8'20''"),
+                                   .totalSteps("7,682"),
+                                   .totalDistance("8.25")])
     }
 }

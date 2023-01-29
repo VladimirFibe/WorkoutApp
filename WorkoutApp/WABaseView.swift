@@ -5,7 +5,7 @@ class WABaseView: UIView {
         super.init(frame: frame)
         setupViews()
         layoutViews()
-        configureViews()
+        configureAppearance()
     }
     
     required init?(coder: NSCoder) {
@@ -15,5 +15,5 @@ class WABaseView: UIView {
 @objc extension WABaseView {
     func setupViews() {}
     func layoutViews() {}
-    func configureViews() {}
+    func configureAppearance() {}
 }

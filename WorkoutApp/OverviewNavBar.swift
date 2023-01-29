@@ -58,8 +58,8 @@ extension OverviewNavBar {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         backgroundColor = .white
 
         titleLabel.text = Res.Strings.NavBar.overview

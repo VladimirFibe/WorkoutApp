@@ -7,7 +7,7 @@ class WABaseInfoView: WABaseView {
     }
     
     private let button = WAButton(with: .primary)
-    private let contentView = UIView().then {
+    let contentView = UIView().then {
         $0.backgroundColor = .white
         $0.layer.borderColor = Res.Colors.separator.cgColor
         $0.layer.borderWidth = 1
@@ -63,8 +63,8 @@ extension WABaseInfoView {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         backgroundColor = .clear
     }
 }

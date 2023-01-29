@@ -1,6 +1,40 @@
 import UIKit
 
+enum StatsItem {
+    case averagePace(String)
+    case heartRate(String)
+    case totalDistance(String)
+    case totalSteps(String)
+
+    var data: StatItemView.ItemData {
+        switch self {
+        case .averagePace(let value):
+            return .init(image: Res.Images.Session.Stats.averagePace,
+                         value: value + " / km",
+                         title: Res.Strings.Session.averagePace)
+        case .heartRate(let value):
+            return .init(image: Res.Images.Session.Stats.heartRate,
+                         value: value + " bpm",
+                         title: Res.Strings.Session.heartRate)
+        case .totalDistance(let value):
+            return .init(image: Res.Images.Session.Stats.totalDistance,
+                         value: value + " km",
+                         title: Res.Strings.Session.totalDistance)
+        case .totalSteps(let value):
+            return .init(image: Res.Images.Session.Stats.totalSteps,
+                         value: value,
+                         title: Res.Strings.Session.totalSteps)
+        }
+    }
+}
+
 final class StatItemView: WABaseView {
+    struct ItemData {
+        let image: UIImage?
+        let value: String
+        let title: String
+    }
+    
     private let imageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
     }
@@ -16,12 +50,14 @@ final class StatItemView: WABaseView {
     
     lazy var textStack = UIStackView(arrangedSubviews: [valueLabel, titleLabel]).then {
         $0.axis = .vertical
+        $0.spacing = 3
+        $0.distribution = .fillProportionally
     }
     
-    func configure(with title: String, value: String, image: UIImage? = nil) {
-        imageView.image = image
-        valueLabel.text = value
-        titleLabel.text = title
+    func configure(with item: StatsItem) {
+        imageView.image = item.data.image
+        valueLabel.text = item.data.value
+        titleLabel.text = item.data.title.uppercased()
     }
 }
 
@@ -46,7 +82,7 @@ extension StatItemView {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
     }
 }
