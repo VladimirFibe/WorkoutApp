@@ -1,12 +1,51 @@
 import UIKit
 
 final class ProgressController: WABaseController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Workout Progress"
-        addNavBarButton(at: .left, with: "Export")
-        addNavBarButton(at: .right, with: "Details")
+    private let dailyPerformanceView = DailyPerformanceView(with: Res.Strings.Progress.dailyPerformance,
+                                                            buttonTitle: Res.Strings.Progress.last7Days)
+
+    private let monthlyPerformanceView = WABaseInfoView(with: Res.Strings.Progress.monthlyPerformance,
+                                                                buttonTitle: Res.Strings.Progress.last10Months)
+    override func navBarRightButtonHandler() {}
+}
+
+extension ProgressController {
+    override func setupViews() {
+        super.setupViews()
+        view.addView(dailyPerformanceView)
+        view.addView(monthlyPerformanceView)
     }
     
-    override func navBarRightButtonHandler() {}
+    override func layoutViews() {
+        super.layoutViews()
+        NSLayoutConstraint.activate([
+            dailyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            dailyPerformanceView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            dailyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            dailyPerformanceView.heightAnchor.constraint(equalTo: dailyPerformanceView.widthAnchor, multiplier: 0.68),
+
+            monthlyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            monthlyPerformanceView.topAnchor.constraint(equalTo: dailyPerformanceView.bottomAnchor, constant: 15),
+            monthlyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            monthlyPerformanceView.heightAnchor.constraint(equalTo: monthlyPerformanceView.widthAnchor,
+                                                           multiplier: 1.06),
+        ])
+    }
+    
+    override func configureAppearance() {
+        super.configureAppearance()
+        title = Res.Strings.NavBar.progress
+        navigationController?.tabBarItem.title = Res.Strings.TabBar.title(for: .progress)
+
+        addNavBarButton(at: .left, with: Res.Strings.Progress.navBarLetf)
+        addNavBarButton(at: .right, with: Res.Strings.Progress.navBarRight)
+
+        dailyPerformanceView.configure(with: [.init(value: "1", heightMultiplier: 0.2, title: "Mon"),
+                                              .init(value: "2", heightMultiplier: 0.4, title: "Teu"),
+                                              .init(value: "3", heightMultiplier: 0.6, title: "Wen"),
+                                              .init(value: "4", heightMultiplier: 0.8, title: "Thu"),
+                                              .init(value: "5", heightMultiplier: 1, title: "Fri"),
+                                              .init(value: "3", heightMultiplier: 0.6, title: "Sat"),
+                                              .init(value: "2", heightMultiplier: 0.4, title: "Sun")])
+    }
 }
