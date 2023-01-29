@@ -21,7 +21,6 @@ final class TimerView: WABaseInfoView {
     }
     
     private let elapsedTimeValueLabel = UILabel().then {
-        $0.text = "37:49"
         $0.font = Res.Fonts.helveticaRegular(with: 46)
         $0.textColor = Res.Colors.titleGray
         $0.textAlignment = .center
@@ -34,8 +33,6 @@ final class TimerView: WABaseInfoView {
         $0.textAlignment = .center
     }
     private let renamingTimeValueLabel = UILabel().then {
-        
-        $0.text = "12:51"
         $0.font = Res.Fonts.helveticaRegular(with: 13)
         $0.textColor = Res.Colors.titleGray
         $0.textAlignment = .center
@@ -49,6 +46,16 @@ final class TimerView: WABaseInfoView {
         $0.spacing = 10
     }
     
+    let completedPercentView = PercentView()
+    let remainingPercentView = PercentView()
+    let separatorView = UIView().then {
+        $0.backgroundColor = Res.Colors.separator
+    }
+    lazy var percentStack = UIStackView(arrangedSubviews: [
+        completedPercentView, separatorView, remainingPercentView]).then {
+        $0.spacing = 25
+    }
+    
     func configure(with duration: Double, progress: Double) {
         timerDuration = duration
         let tempCurrentValue = progress > duration ? duration : progress
@@ -56,6 +63,8 @@ final class TimerView: WABaseInfoView {
         let percent = tempCurrentValue / goalValueDevider
         elapsedTimeValueLabel.text = getDisplayedString(from: Int(tempCurrentValue))
         renamingTimeValueLabel.text = getDisplayedString(from: Int(duration - tempCurrentValue))
+        completedPercentView.configure(with: Int(100 * percent), and: "COMPLETED")
+        remainingPercentView.configure(with: Int(100 * (1 - percent)), and: "REMAINING")
         progressView.drawProgress(with: CGFloat(percent))
     }
     
@@ -85,7 +94,7 @@ final class TimerView: WABaseInfoView {
         timer = Timer.scheduledTimer(withTimeInterval: 0.1,
                                      repeats: true) { [weak self] timer in
             guard let self = self else {return}
-            self.timerProgress -= 0.1
+            self.timerProgress -= self.timerDuration * 0.02
             if self.timerProgress <= 0 {
                 self.timerProgress = 0
                 timer.invalidate()
@@ -100,6 +109,7 @@ extension TimerView {
         super.setupViews()
         addView(progressView)
         addView(stackView)
+        addView(percentStack)
     }
     
     override func layoutViews() {
@@ -109,10 +119,18 @@ extension TimerView {
             progressView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 5),
             trailingAnchor.constraint(equalToSystemSpacingAfter: progressView.trailingAnchor, multiplier: 5),
             progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor),
-            bottomAnchor.constraint(equalToSystemSpacingBelow: progressView.bottomAnchor, multiplier: 5),
+
             
             stackView.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: progressView.centerYAnchor)
+            stackView.centerYAnchor.constraint(equalTo: progressView.centerYAnchor),
+            
+            percentStack.topAnchor.constraint(equalTo: progressView.bottomAnchor),
+            percentStack.centerXAnchor.constraint(equalTo: progressView.centerXAnchor),
+            bottomAnchor.constraint(equalToSystemSpacingBelow: percentStack.bottomAnchor, multiplier: 1),
+            percentStack.heightAnchor.constraint(equalToConstant: 50),
+            percentStack.widthAnchor.constraint(equalToConstant: 175),
+            separatorView.widthAnchor.constraint(equalToConstant: 1),
+            separatorView.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
@@ -126,11 +144,8 @@ private extension TimerView {
         let seconds = value % 60
         let minutes = (value / 60) % 60
         let hours = value / 3600
-        let secondsStr = String(format: "%02d", seconds)
-        let minutesStr = String(format: "%02d", minutes)
-        let hoursStr = String(format: "%02d", hours)
         return hours == 0
-        ? [minutesStr, secondsStr].joined(separator: ":")
-        : [hoursStr, minutesStr, secondsStr].joined(separator: ":")
+        ? String(format: "%02d:%02d", minutes, seconds)
+        : String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 }

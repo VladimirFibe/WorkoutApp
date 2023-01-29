@@ -2,7 +2,7 @@ import UIKit
 
 final class SessionController: WABaseController {
     private let timerView = TimerView()
-    private let timerDuration = 4820.0
+    private let timerDuration = 40.0
     
     override func navBarLeftButtonHandler() {
         if timerView.timerState != .isRunning {
@@ -39,6 +39,7 @@ extension SessionController {
             timerView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             timerView.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: timerView.trailingAnchor, multiplier: 2)
+            
         ])
     }
     

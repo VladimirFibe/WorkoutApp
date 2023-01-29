@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020ACF30298686F5004B104B /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020ACF2F298686F5004B104B /* PercentView.swift */; };
 		0229C5912985FADB00751923 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229C5902985FADB00751923 /* Then.swift */; };
 		0229C5942986189800751923 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229C5932986189800751923 /* TimerView.swift */; };
 		0229C5972986193C00751923 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229C5962986193C00751923 /* ProgressView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020ACF2F298686F5004B104B /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
 		0229C5902985FADB00751923 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		0229C5932986189800751923 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		0229C5962986193C00751923 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				0229C5932986189800751923 /* TimerView.swift */,
 				0229C5962986193C00751923 /* ProgressView.swift */,
+				020ACF2F298686F5004B104B /* PercentView.swift */,
 			);
 			name = Timer;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				0266E4072985074200209F13 /* OverviewNavBar.swift in Sources */,
 				0266E3AF2984B6B300209F13 /* AppDelegate.swift in Sources */,
 				0266E3F32984E28100209F13 /* UIView+Extension.swift in Sources */,
+				020ACF30298686F5004B104B /* PercentView.swift in Sources */,
 				0266E4142985B18D00209F13 /* WAButton.swift in Sources */,
 				0266E3EE2984DBA900209F13 /* NavBarController.swift in Sources */,
 				0266E3FC2984E5C700209F13 /* ProgressController.swift in Sources */,
