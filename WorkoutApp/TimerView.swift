@@ -23,6 +23,6 @@ extension TimerView {
     
     override func configureViews() {
         super.configureViews()
-        progressView.drawProgress(with: 0.7)
+        progressView.drawProgress(with: 1)
     }
 }

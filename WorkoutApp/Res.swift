@@ -2,14 +2,14 @@ import UIKit
 
 enum Res {
     enum Colors {
-        static var active = UIColor(hex: "#437BFEFF")
-        static var inActive = UIColor(hex: "#929DA5FF")
+        static let active = UIColor(hex: "#437BFEFF")
+        static let inActive = UIColor(hex: "#929DA5FF")
         
-        static var separator = UIColor(hex: "#E8ECEFFF")
-        static var titleGray = UIColor(hex: "#545C77FF")
-        static var secondary = UIColor(hex: "#F0F3FFFF")
+        static let separator = UIColor(hex: "#E8ECEFFF")
+        static let titleGray = UIColor(hex: "#545C77FF")
+        static let secondary = UIColor(hex: "#F0F3FFFF")
         
-        static var background = UIColor(hex: "#F8F9F9FF")
+        static let background = UIColor(hex: "#F8F9F9FF")
         
     }
     
@@ -26,14 +26,14 @@ enum Res {
         }
         
         enum NavBar {
-            static var overview = "Today"
-            static var session = "High Intensity Cardio"
-            static var progress = "Workout Progress"
-            static var settings = "Settings"
+            static let overview = "Today"
+            static let session = "High Intensity Cardio"
+            static let progress = "Workout Progress"
+            static let settings = "Settings"
         }
         
         enum Overview {
-            static var allWorkoutsButton = "All Workouts"
+            static let allWorkoutsButton = "All Workouts"
         }
     }
     
@@ -50,8 +50,8 @@ enum Res {
         }
         
         enum Common {
-            static var downArrow = #imageLiteral(resourceName: "downArrow")
-            static var addButton = #imageLiteral(resourceName: "addButton")
+            static let downArrow = #imageLiteral(resourceName: "downArrow")
+            static let addButton = #imageLiteral(resourceName: "addButton")
         }
     }
     

@@ -1,8 +1,10 @@
 import UIKit
 
 final class WeekView: BaseView {
-    private let calendar = Calendar.current
-    private let stackView = UIStackView()
+    private let stackView = UIStackView().then {
+        $0.spacing = 7
+        $0.distribution = .fillEqually
+    }
 }
 
 extension WeekView {
@@ -23,13 +25,14 @@ extension WeekView {
     
     override func configureViews() {
         super.configureViews()
-        stackView.spacing = 7
-        stackView.distribution = .fillEqually
-        var weekdays = calendar.shortWeekdaySymbols
-        if calendar.firstWeekday == 1 {
+        
+        var weekdays = Date.calendar.veryShortStandaloneWeekdaySymbols
+        
+        if Date.calendar.firstWeekday == 2 {
             let sun = weekdays.remove(at: 0)
             weekdays.append(sun)
         }
+        
         weekdays.enumerated().forEach { index, name in
             let view = WeekDayView()
             view.configure(with: index, and: name)
