@@ -27,7 +27,7 @@
 		0266E40B29851E8C00209F13 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40A29851E8C00209F13 /* WeekView.swift */; };
 		0266E40E2985266D00209F13 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40D2985266D00209F13 /* WeekDayView.swift */; };
 		0266E41029852EEA00209F13 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40F29852EEA00209F13 /* Date+Extension.swift */; };
-		0266E41229856D1B00209F13 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E41129856D1B00209F13 /* BaseInfoView.swift */; };
+		0266E41229856D1B00209F13 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E41129856D1B00209F13 /* WABaseInfoView.swift */; };
 		0266E4142985B18D00209F13 /* WAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E4132985B18D00209F13 /* WAButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +56,7 @@
 		0266E40A29851E8C00209F13 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0266E40D2985266D00209F13 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		0266E40F29852EEA00209F13 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		0266E41129856D1B00209F13 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		0266E41129856D1B00209F13 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
 		0266E4132985B18D00209F13 /* WAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +158,7 @@
 				0266E3ED2984DBA800209F13 /* NavBarController.swift */,
 				0266E3F02984DF6600209F13 /* BaseController.swift */,
 				0266E408298507BA00209F13 /* BaseView.swift */,
-				0266E41129856D1B00209F13 /* BaseInfoView.swift */,
+				0266E41129856D1B00209F13 /* WABaseInfoView.swift */,
 				0266E4132985B18D00209F13 /* WAButton.swift */,
 			);
 			name = Base;
@@ -302,7 +302,7 @@
 				0266E4142985B18D00209F13 /* WAButton.swift in Sources */,
 				0266E3EE2984DBA900209F13 /* NavBarController.swift in Sources */,
 				0266E3FC2984E5C700209F13 /* ProgressController.swift in Sources */,
-				0266E41229856D1B00209F13 /* BaseInfoView.swift in Sources */,
+				0266E41229856D1B00209F13 /* WABaseInfoView.swift in Sources */,
 				0266E3EC2984C58000209F13 /* Res.swift in Sources */,
 				0266E3B12984B6B300209F13 /* SceneDelegate.swift in Sources */,
 				0229C5912985FADB00751923 /* Then.swift in Sources */,

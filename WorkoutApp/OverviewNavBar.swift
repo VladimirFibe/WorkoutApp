@@ -1,8 +1,9 @@
 import UIKit
 
 final class OverviewNavBar: BaseView {
-    private let allWorkoutsButton = WAButton(with: .secondary,
-                                               and: Res.Strings.Overview.allWorkoutsButton)
+    private let allWorkoutsButton = WAButton(with: .secondary).then {
+        $0.setTitle(Res.Strings.Overview.allWorkoutsButton)
+    }
     private let titleLabel = UILabel()
     private let addButton = UIButton()
     
@@ -43,7 +44,6 @@ extension OverviewNavBar {
             allWorkoutsButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             addButton.leadingAnchor.constraint(equalToSystemSpacingAfter: allWorkoutsButton.trailingAnchor, multiplier: 2),
             allWorkoutsButton.heightAnchor.constraint(equalToConstant: 28),
-            allWorkoutsButton.widthAnchor.constraint(equalToConstant: 130),
             
             titleLabel.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
             titleLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
