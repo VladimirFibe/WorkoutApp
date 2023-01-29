@@ -1,6 +1,6 @@
 import UIKit
 
-class WABaseInfoView: BaseView {
+class WABaseInfoView: WABaseView {
     private let titleLabel = UILabel().then {
         $0.font = Res.Fonts.helveticaRegular(with: 13)
         $0.textColor = Res.Colors.inActive

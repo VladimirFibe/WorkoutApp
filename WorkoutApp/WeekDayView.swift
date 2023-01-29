@@ -1,6 +1,6 @@
 import UIKit
 
-final class WeekDayView: BaseView {
+final class WeekDayView: WABaseView {
     private let nameLabel = UILabel()
     private let dateLabel = UILabel()
     private lazy var stackView = UIStackView(arrangedSubviews: [nameLabel, dateLabel])

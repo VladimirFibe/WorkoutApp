@@ -1,6 +1,6 @@
 import UIKit
 
-final class OverviewNavBar: BaseView {
+final class OverviewNavBar: WABaseView {
     private let allWorkoutsButton = WAButton(with: .secondary).then {
         $0.setTitle(Res.Strings.Overview.allWorkoutsButton)
     }

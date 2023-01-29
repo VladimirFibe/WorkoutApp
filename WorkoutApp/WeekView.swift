@@ -1,6 +1,6 @@
 import UIKit
 
-final class WeekView: BaseView {
+final class WeekView: WABaseView {
     private let stackView = UIStackView().then {
         $0.spacing = 7
         $0.distribution = .fillEqually

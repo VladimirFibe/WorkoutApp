@@ -25,7 +25,7 @@
 		0266E3FE2984E5E700209F13 /* SessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3FD2984E5E700209F13 /* SessionController.swift */; };
 		0266E4002984E60600209F13 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3FF2984E60600209F13 /* SettingsController.swift */; };
 		0266E4072985074200209F13 /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E4062985074200209F13 /* OverviewNavBar.swift */; };
-		0266E409298507BA00209F13 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E408298507BA00209F13 /* BaseView.swift */; };
+		0266E409298507BA00209F13 /* WABaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E408298507BA00209F13 /* WABaseView.swift */; };
 		0266E40B29851E8C00209F13 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40A29851E8C00209F13 /* WeekView.swift */; };
 		0266E40E2985266D00209F13 /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40D2985266D00209F13 /* WeekDayView.swift */; };
 		0266E41029852EEA00209F13 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40F29852EEA00209F13 /* Date+Extension.swift */; };
@@ -56,7 +56,7 @@
 		0266E3FF2984E60600209F13 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		0266E4022984E75A00209F13 /* workout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout.png; sourceTree = "<group>"; };
 		0266E4062985074200209F13 /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
-		0266E408298507BA00209F13 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0266E408298507BA00209F13 /* WABaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseView.swift; sourceTree = "<group>"; };
 		0266E40A29851E8C00209F13 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0266E40D2985266D00209F13 /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		0266E40F29852EEA00209F13 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				0266E3E42984BDEF00209F13 /* TabBarController.swift */,
 				0266E3ED2984DBA800209F13 /* NavBarController.swift */,
 				0266E3F02984DF6600209F13 /* WABaseController.swift */,
-				0266E408298507BA00209F13 /* BaseView.swift */,
+				0266E408298507BA00209F13 /* WABaseView.swift */,
 				0266E41129856D1B00209F13 /* WABaseInfoView.swift */,
 				0266E4132985B18D00209F13 /* WAButton.swift */,
 			);
@@ -331,7 +331,7 @@
 				0229C5912985FADB00751923 /* Then.swift in Sources */,
 				0266E3F12984DF6600209F13 /* WABaseController.swift in Sources */,
 				0266E3FA2984E59E00209F13 /* OverviewController.swift in Sources */,
-				0266E409298507BA00209F13 /* BaseView.swift in Sources */,
+				0266E409298507BA00209F13 /* WABaseView.swift in Sources */,
 				0266E40E2985266D00209F13 /* WeekDayView.swift in Sources */,
 				0266E3FE2984E5E700209F13 /* SessionController.swift in Sources */,
 				0266E3EA2984C4A500209F13 /* UIColor+Extension.swift in Sources */,
