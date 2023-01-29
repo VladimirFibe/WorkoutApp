@@ -1,7 +1,7 @@
 import UIKit
 
 final class SessionController: BaseController {
-    private let timerView = WABaseInfoView(with: "One", buttonTitle: "Two")
+    private let timerView = TimerView()
     
     @objc func buttonTapped() {}
 }
