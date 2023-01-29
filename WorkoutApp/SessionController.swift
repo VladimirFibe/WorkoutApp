@@ -68,5 +68,10 @@ extension SessionController {
                                    .averagePace("8'20''"),
                                    .totalSteps("7,682"),
                                    .totalDistance("8.25")])
+     
+        stepsView.configure(with: [.init(value: "8k", heightMultiplier: 1, title: "2/14"),
+                                   .init(value: "7k", heightMultiplier: 0.8, title: "2/15"),
+                                   .init(value: "5k", heightMultiplier: 0.6, title: "2/16"),
+                                   .init(value: "6k", heightMultiplier: 0.7, title: "2/17")])
     }
 }

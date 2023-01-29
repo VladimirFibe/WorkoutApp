@@ -33,7 +33,6 @@ extension StatsView {
     }
     
     override func configureAppearance() {
-        backgroundColor = .red
         super.configureAppearance()
 
     }
