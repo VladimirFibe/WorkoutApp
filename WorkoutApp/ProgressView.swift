@@ -9,11 +9,9 @@ import UIKit
 
 extension TimerView {
     final class ProgressView: UIView {
-        var circleFrame: CGFloat {
-            print("DEBUG: \(frame.width)")
-            return frame.width == 0 ? UIScreen.main.bounds.width - 110 : frame.width
-        }
+
         func drawProgress(with percent: CGFloat) {
+            let circleFrame = UIScreen.main.bounds.width - 110
             let radius = circleFrame / 2
             let center = CGPoint(x: radius, y: radius)
             let startAngle = -1.25 * CGFloat.pi
@@ -63,10 +61,52 @@ extension TimerView {
             dotLayer.lineCap = .round
             dotLayer.lineWidth = 8
             
+            let barsFrame = circleFrame - 50
+            let barRadius = barsFrame / 2
+            
+            let barsPath = UIBezierPath(arcCenter: center,
+                                        radius: barRadius,
+                                        startAngle: startAngle,
+                                        endAngle: endAngle,
+                                        clockwise: true)
+            
+            let barsLayer = CAShapeLayer()
+            barsLayer.path = barsPath.cgPath
+            barsLayer.fillColor = UIColor.clear.cgColor
+            barsLayer.strokeColor = UIColor.clear.cgColor
+            barsLayer.lineWidth = 6
+            
+            let startBarRadius = barRadius - 0.5 * barsLayer.lineWidth
+            let endBarRadius = startBarRadius + barsLayer.lineWidth
+            
+            var angle: CGFloat = 7 / 6
+            (1...9).forEach { _ in
+                let barAngle = angle * CGFloat.pi
+                let starBarPoint = CGPoint(x: cos(-barAngle) * startBarRadius + center.x,
+                                           y: sin(-barAngle) * startBarRadius + center.y)
+                let endBarPoin = CGPoint(x: cos(-barAngle) * endBarRadius + center.x,
+                                         y: sin(-barAngle) * endBarRadius + center.y)
+                let barPath = UIBezierPath()
+                barPath.move(to: starBarPoint)
+                barPath.addLine(to: endBarPoin)
+                
+                let barLayer = CAShapeLayer()
+                barLayer.path = barPath.cgPath
+                barLayer.fillColor = UIColor.clear.cgColor
+                barLayer.strokeColor = angle >= (1.25 - 1.5 * percent) ? Res.Colors.active.cgColor : Res.Colors.separator.cgColor
+                barLayer.lineCap = .round
+                barLayer.lineWidth = 4
+                
+                barsLayer.addSublayer(barLayer)
+                print(angle)
+                angle -= 1 / 6
+            }
+            
             layer.addSublayer(defaultCircleLayer)
             layer.addSublayer(circleLayer)
             layer.addSublayer(bigDotLayer)
             layer.addSublayer(dotLayer)
+            layer.addSublayer(barsLayer)
         }
     }
 }
