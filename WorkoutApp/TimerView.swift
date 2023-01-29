@@ -10,7 +10,7 @@ final class TimerView: WABaseInfoView {
     private var timer = Timer()
     private var timerProgress: CGFloat = 0
     private var timerDuration: Double = 0
-    
+    var callBack: (() -> Void)?
     public var timerState = TimerState.isStopped
     
     private let elapsedTimeLabel = UILabel().then {
@@ -46,7 +46,6 @@ final class TimerView: WABaseInfoView {
                                                         renamingTimeLabel,
                                                         renamingTimeValueLabel]).then {
         $0.axis = .vertical
-//        $0.distribution = .fillProportionally
         $0.spacing = 10
     }
     
@@ -55,11 +54,12 @@ final class TimerView: WABaseInfoView {
         let tempCurrentValue = progress > duration ? duration : progress
         let goalValueDevider = duration == 0 ? 1 : duration
         let percent = tempCurrentValue / goalValueDevider
-        
+        elapsedTimeValueLabel.text = getDisplayedString(from: Int(tempCurrentValue))
+        renamingTimeValueLabel.text = getDisplayedString(from: Int(duration - tempCurrentValue))
         progressView.drawProgress(with: CGFloat(percent))
     }
     
-    func startTimer() {
+    func startTimer(completion: @escaping (CGFloat) -> Void) {
         timer.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.01,
                                      repeats: true) { [weak self] timer in
@@ -68,6 +68,7 @@ final class TimerView: WABaseInfoView {
             if self.timerProgress > self.timerDuration {
                 self.timerProgress = self.timerDuration
                 timer.invalidate()
+                completion(self.timerProgress)
             }
             self.configure(with: self.timerDuration, progress: self.timerProgress)
         }
@@ -117,5 +118,19 @@ extension TimerView {
     
     override func configureViews() {
         super.configureViews()
+    }
+}
+
+private extension TimerView {
+    func getDisplayedString(from value: Int) -> String {
+        let seconds = value % 60
+        let minutes = (value / 60) % 60
+        let hours = value / 3600
+        let secondsStr = String(format: "%02d", seconds)
+        let minutesStr = String(format: "%02d", minutes)
+        let hoursStr = String(format: "%02d", hours)
+        return hours == 0
+        ? [minutesStr, secondsStr].joined(separator: ":")
+        : [hoursStr, minutesStr, secondsStr].joined(separator: ":")
     }
 }

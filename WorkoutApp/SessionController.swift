@@ -2,11 +2,15 @@ import UIKit
 
 final class SessionController: WABaseController {
     private let timerView = TimerView()
-    private let timerDuration = 3.0
+    private let timerDuration = 4820.0
     
     override func navBarLeftButtonHandler() {
         if timerView.timerState != .isRunning {
-            timerView.startTimer()
+            timerView.startTimer { [weak self] time in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self?.navBarRightButtonHandler()
+                }
+            }
             timerView.timerState = .isRunning
             setTitleForNavBarButton(Res.Strings.Session.navBarPause, at: .left)
         } else {
