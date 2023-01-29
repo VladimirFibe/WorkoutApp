@@ -1,29 +1,23 @@
 import UIKit
 
 class BaseInfoView: BaseView {
-    private let titleLabel: UILabel = {
+    private let titleLabel = UILabel().then {
         $0.font = Res.Fonts.helveticaRegular(with: 13)
         $0.textColor = Res.Colors.inActive
-        return $0
-    }(UILabel())
+    }
     
-    private let button: UIButton = {
-        $0.backgroundColor = .red
-        return $0
-    }(UIButton())
-    private let contentView: UIView = {
+    private let button: WAButton
+    private let contentView = UIView().then {
         $0.backgroundColor = .white
         $0.layer.borderColor = Res.Colors.separator.cgColor
         $0.layer.borderWidth = 1
         $0.layer.cornerRadius = 5
-        return $0
-    }(UIView())
+    }
     
-    init(with title: String? = nil,
-         buttonTitle: String? = nil) {
+    init(with title: String? = nil, buttonTitle: String? = nil) {
         titleLabel.text = title?.uppercased()
         titleLabel.textAlignment = buttonTitle == nil ? .center : .left
-        button.setTitle(buttonTitle, for: .normal)
+        button = WAButton(with: .primary, and: buttonTitle ?? "")
         button.isHidden = buttonTitle == nil
         super.init(frame: .zero)
     }

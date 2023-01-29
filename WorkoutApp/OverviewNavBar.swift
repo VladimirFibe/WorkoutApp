@@ -1,7 +1,8 @@
 import UIKit
 
 final class OverviewNavBar: BaseView {
-    private let allWorkoutsButton = SecondaryButton()
+    private let allWorkoutsButton = WAButton(with: .secondary,
+                                               and: Res.Strings.Overview.allWorkoutsButton)
     private let titleLabel = UILabel()
     private let addButton = UIButton()
     
@@ -11,6 +12,7 @@ final class OverviewNavBar: BaseView {
         super.layoutSubviews()
         addBottomBorder(with: Res.Colors.separator, height: 1)
     }
+    
     func allWorkoutsButtonAction(_ target: Any?, action: Selector) {
         allWorkoutsButton.addTarget(target, action: action, for: .primaryActionTriggered)
     }
@@ -65,8 +67,5 @@ extension OverviewNavBar {
         titleLabel.font = Res.Fonts.helveticaRegular(with: 22)
 
         addButton.setImage(Res.Images.Common.addButton, for: .normal)
-        
-        allWorkoutsButton.setTitle(Res.Strings.Overview.allWorkoutsButton)
-        
     }
 }

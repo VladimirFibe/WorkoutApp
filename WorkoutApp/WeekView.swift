@@ -27,7 +27,6 @@ extension WeekView {
         stackView.distribution = .fillEqually
         var weekdays = calendar.shortWeekdaySymbols
         if calendar.firstWeekday == 1 {
-            print("DEBUG: \(weekdays)")
             let sun = weekdays.remove(at: 0)
             weekdays.append(sun)
         }

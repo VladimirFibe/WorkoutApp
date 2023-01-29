@@ -8,7 +8,5 @@ final class ProgressController: BaseController {
         addNavBarButton(at: .right, with: "Details")
     }
     
-    override func navBarRightButtonHandler() {
-        print("DEBUG: \(#function) Progress!!")
-    }
+    override func navBarRightButtonHandler() {}
 }

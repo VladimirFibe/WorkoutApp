@@ -1,13 +1,9 @@
 import UIKit
 
 final class SessionController: BaseController {
-    private let timerView: BaseInfoView = {
-        return $0
-    }(BaseInfoView(with: "One", buttonTitle: "Two"))
+    private let timerView = BaseInfoView(with: "One", buttonTitle: "Two")
     
-    @objc func buttonTapped() {
-        print("DEBUG: \(#function)")
-    }
+    @objc func buttonTapped() {}
 }
 
 extension SessionController {
@@ -33,5 +29,4 @@ extension SessionController {
         addNavBarButton(at: .left, with: "Pause")
         addNavBarButton(at: .right, with: "Finish")
     }
-
 }
