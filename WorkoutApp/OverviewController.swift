@@ -1,6 +1,6 @@
 import UIKit
 
-final class OverviewController: BaseController {
+final class OverviewController: WABaseController {
     
     private let navBar = OverviewNavBar()
     

@@ -11,6 +11,8 @@ extension TimerView {
     final class ProgressView: UIView {
 
         func drawProgress(with percent: CGFloat) {
+            layer.sublayers?.removeAll()
+            
             let circleFrame = UIScreen.main.bounds.width - 110
             let radius = circleFrame / 2
             let center = CGPoint(x: radius, y: radius)
@@ -98,7 +100,6 @@ extension TimerView {
                 barLayer.lineWidth = 4
                 
                 barsLayer.addSublayer(barLayer)
-                print(angle)
                 angle -= 1 / 6
             }
             

@@ -35,6 +35,12 @@ enum Res {
         enum Overview {
             static let allWorkoutsButton = "All Workouts"
         }
+        
+        enum Session {
+            static let navBarStart = "Start   "
+            static let navBarPause = "Pause"
+            static let navBarFinish = "Finish"
+        }
     }
     
     enum Images {
