@@ -2,14 +2,14 @@ import UIKit
 
 enum Res {
     enum Colors {
-        static let active = UIColor(hex: "#437BFEFF")
-        static let inActive = UIColor(hex: "#929DA5FF")
+        static let active       = UIColor(hex: "#437BFEFF")
+        static let inActive     = UIColor(hex: "#929DA5FF")
         
-        static let separator = UIColor(hex: "#E8ECEFFF")
-        static let titleGray = UIColor(hex: "#545C77FF")
-        static let secondary = UIColor(hex: "#F0F3FFFF")
+        static let separator    = UIColor(hex: "#E8ECEFFF")
+        static let titleGray    = UIColor(hex: "#545C77FF")
+        static let secondary    = UIColor(hex: "#F0F3FFFF")
         
-        static let background = UIColor(hex: "#F8F9F9FF")
+        static let background   = UIColor(hex: "#F8F9F9FF")
         
     }
     
@@ -27,7 +27,7 @@ enum Res {
         
         enum NavBar {
             static let overview = "Today"
-            static let session = "High Intensity Cardio"
+            static let session  = "High Intensity Cardio"
             static let progress = "Workout Progress"
             static let settings = "Settings"
         }
@@ -37,12 +37,27 @@ enum Res {
         }
         
         enum Session {
-            static let navBarStart = "Start   "
-            static let navBarPause = "Pause"
-            static let navBarFinish = "Finish"
+            static let navBarStart      = "Start   "
+            static let navBarPause      = "Pause"
+            static let navBarFinish     = "Finish"
             
-            static let elapsedTime = "Elapsed Time"
-            static let remainingTime = "Renaiming Time"
+            static let elapsedTime      = "Elapsed Time"
+            static let remainingTime    = "Renaiming Time"
+            static let completed        = "Completed"
+            static let remaining        = "Remainig"
+            
+            static let workoutStats     = "Workout stats"
+            static let averagePace      = "Average pace"
+            static let heartRate        = "Heart rate"
+            static let totalDistance    = "Total distance"
+            static let totalSteps       = "Tatal steps"
+            
+            static let stepsCounter     = "Steps Counter"
+        }
+        
+        enum Progress {
+            static let navBarLetf   = "Export"
+            static let navBarRight  = "Details"
         }
     }
     
@@ -61,6 +76,15 @@ enum Res {
         enum Common {
             static let downArrow = #imageLiteral(resourceName: "downArrow")
             static let addButton = #imageLiteral(resourceName: "addButton")
+        }
+        
+        enum Session {
+            enum Stats {
+                static let averagePace      = #imageLiteral(resourceName: "speed")
+                static let heartRate        = #imageLiteral(resourceName: "heartbeat")
+                static let totalDistance    = #imageLiteral(resourceName: "maps")
+                static let totalSteps       = #imageLiteral(resourceName: "steps")
+            }
         }
     }
     
