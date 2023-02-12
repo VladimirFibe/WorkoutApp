@@ -1,10 +1,3 @@
-//
-//  ProgressView.swift
-//  WorkoutApp
-//
-//  Created by Vladimir Fibe on 1/29/23.
-//
-
 import UIKit
 
 extension TimerView {

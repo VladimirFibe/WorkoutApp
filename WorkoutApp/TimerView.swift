@@ -1,4 +1,4 @@
-import UIKit
+import SwiftUI
 
 enum TimerState {
     case isRunning
@@ -147,5 +147,24 @@ private extension TimerView {
         return hours == 0
         ? String(format: "%02d:%02d", minutes, seconds)
         : String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+}
+
+struct TimerViewRepresentable: UIViewRepresentable {
+    func makeUIView(context: Context) -> TimerView {
+        let timerView = TimerView()
+        timerView.configure(with: 3, progress: 1.5)
+        return timerView
+        
+    }
+    
+    func updateUIView(_ uiView: TimerView, context: Context) {
+        
+    }
+}
+
+struct TimerViewRepresentable_Previews: PreviewProvider {
+    static var previews: some View {
+        TimerViewRepresentable()
     }
 }

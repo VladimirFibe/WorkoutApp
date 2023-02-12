@@ -1,4 +1,4 @@
-import UIKit
+import SwiftUI
 
 final class SessionController: WABaseController {
     private let timerView = TimerView()
@@ -73,5 +73,21 @@ extension SessionController {
                                    .init(value: "7k", heightMultiplier: 0.8, title: "2/15"),
                                    .init(value: "5k", heightMultiplier: 0.6, title: "2/16"),
                                    .init(value: "6k", heightMultiplier: 0.7, title: "2/17")])
+    }
+}
+
+struct SessionControllerRepresentable: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> SessionController {
+        SessionController()
+    }
+    
+    func updateUIViewController(_ uiViewController: SessionController, context: Context) {
+        
+    }
+}
+
+struct SessionControllerRepresentable_Previews: PreviewProvider {
+    static var previews: some View {
+        WABarsViewRepresentable()
     }
 }

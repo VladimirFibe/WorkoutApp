@@ -4,7 +4,7 @@ final class ProgressController: WABaseController {
     private let dailyPerformanceView = DailyPerformanceView(with: Res.Strings.Progress.dailyPerformance,
                                                             buttonTitle: Res.Strings.Progress.last7Days)
 
-    private let monthlyPerformanceView = WABaseInfoView(with: Res.Strings.Progress.monthlyPerformance,
+    private let monthlyPerformanceView = MonthlyPerformanceView(with: Res.Strings.Progress.monthlyPerformance,
                                                                 buttonTitle: Res.Strings.Progress.last10Months)
     override func navBarRightButtonHandler() {}
 }
@@ -36,10 +36,10 @@ extension ProgressController {
         super.configureAppearance()
         title = Res.Strings.NavBar.progress
         navigationController?.tabBarItem.title = Res.Strings.TabBar.title(for: .progress)
-
+        
         addNavBarButton(at: .left, with: Res.Strings.Progress.navBarLetf)
         addNavBarButton(at: .right, with: Res.Strings.Progress.navBarRight)
-
+        
         dailyPerformanceView.configure(with: [.init(value: "1", heightMultiplier: 0.2, title: "Mon"),
                                               .init(value: "2", heightMultiplier: 0.4, title: "Teu"),
                                               .init(value: "3", heightMultiplier: 0.6, title: "Wen"),
@@ -47,5 +47,17 @@ extension ProgressController {
                                               .init(value: "5", heightMultiplier: 1, title: "Fri"),
                                               .init(value: "3", heightMultiplier: 0.6, title: "Sat"),
                                               .init(value: "2", heightMultiplier: 0.4, title: "Sun")])
+        
+        monthlyPerformanceView.configure(with: [.init(value: 45, title: "Mar"),
+                                                .init(value: 55, title: "Apr"),
+                                                .init(value: 60, title: "May"),
+                                                .init(value: 65, title: "Jun"),
+                                                .init(value: 70, title: "Jul"),
+                                                .init(value: 100, title: "Aug"),
+                                                .init(value: 65, title: "Sep"),
+                                                .init(value: 45, title: "Oct"),
+                                                .init(value: 30, title: "Nov"),
+                                                .init(value: 15, title: "Dec")],
+                                         topChartOffset: 10)
     }
 }
