@@ -40,7 +40,6 @@ extension WAChartsView {
     
     override func configureAppearance() {
         super.configureAppearance()
-        chartView.backgroundColor = .cyan
     }
 }
 
