@@ -86,6 +86,11 @@ enum Res {
             static let addButton = #imageLiteral(resourceName: "addButton")
         }
         
+        enum OverView {
+            static let checkmarkNoDone  = #imageLiteral(resourceName: "Oval")
+            static let checkmarkDone    = #imageLiteral(resourceName: "Checked")
+            static let rightArrow = #imageLiteral(resourceName: "RightArrow")
+        }
         enum Session {
             enum Stats {
                 static let averagePace      = #imageLiteral(resourceName: "speed")
