@@ -10,8 +10,6 @@ enum Res {
         static let secondary    = UIColor(hex: "#F0F3FFFF")
         
         static let background   = UIColor(hex: "#F8F9F9FF")
-        
-        static let bradRed      = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
     }
     
     enum Strings {
