@@ -42,12 +42,12 @@
 		0266E41029852EEA00209F13 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E40F29852EEA00209F13 /* Date+Extension.swift */; };
 		0266E41229856D1B00209F13 /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E41129856D1B00209F13 /* WABaseInfoView.swift */; };
 		0266E4142985B18D00209F13 /* WAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E4132985B18D00209F13 /* WAButton.swift */; };
-		02928F0729993DD000901D9A /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928F0629993DD000901D9A /* XAxisView.swift */; };
 		02928F09299943A100901D9A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928F08299943A100901D9A /* ChartView.swift */; };
 		02ADDA932988AE620088CD3C /* WABarsViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADDA922988AE620088CD3C /* WABarsViewRepresentable.swift */; };
 		02C6AA1D29876CED00CD29C3 /* MonthlyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6AA1C29876CED00CD29C3 /* MonthlyPerformanceView.swift */; };
 		02C6AA2129876E9A00CD29C3 /* WAChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6AA2029876E9A00CD29C3 /* WAChartsView.swift */; };
 		02C6AA232987715600CD29C3 /* YAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6AA222987715600CD29C3 /* YAxisView.swift */; };
+		02D216E829ABADEC00090CD3 /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D216E729ABADEC00090CD3 /* XAxisView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,12 +90,12 @@
 		0266E40F29852EEA00209F13 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		0266E41129856D1B00209F13 /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
 		0266E4132985B18D00209F13 /* WAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAButton.swift; sourceTree = "<group>"; };
-		02928F0629993DD000901D9A /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XAxisView.swift; path = ../../XAxisView.swift; sourceTree = "<group>"; };
 		02928F08299943A100901D9A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		02ADDA922988AE620088CD3C /* WABarsViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABarsViewRepresentable.swift; sourceTree = "<group>"; };
 		02C6AA1C29876CED00CD29C3 /* MonthlyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyPerformanceView.swift; sourceTree = "<group>"; };
 		02C6AA2029876E9A00CD29C3 /* WAChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAChartsView.swift; sourceTree = "<group>"; };
 		02C6AA222987715600CD29C3 /* YAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAxisView.swift; sourceTree = "<group>"; };
+		02D216E729ABADEC00090CD3 /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				02C6AA222987715600CD29C3 /* YAxisView.swift */,
-				02928F0629993DD000901D9A /* XAxisView.swift */,
+				02D216E729ABADEC00090CD3 /* XAxisView.swift */,
 				02928F08299943A100901D9A /* ChartView.swift */,
 			);
 			name = View;
@@ -504,13 +504,13 @@
 				02C6AA232987715600CD29C3 /* YAxisView.swift in Sources */,
 				020ACF362986A71D004B104B /* StepsView.swift in Sources */,
 				0266E3B12984B6B300209F13 /* SceneDelegate.swift in Sources */,
-				02928F0729993DD000901D9A /* XAxisView.swift in Sources */,
 				0229C5912985FADB00751923 /* Then.swift in Sources */,
 				0266E3F12984DF6600209F13 /* WABaseController.swift in Sources */,
 				0266E3FA2984E59E00209F13 /* OverviewController.swift in Sources */,
 				0266E409298507BA00209F13 /* WABaseView.swift in Sources */,
 				0266E40E2985266D00209F13 /* WeekDayView.swift in Sources */,
 				0266E3FE2984E5E700209F13 /* SessionController.swift in Sources */,
+				02D216E829ABADEC00090CD3 /* XAxisView.swift in Sources */,
 				020ACF342986A6E1004B104B /* StatsView.swift in Sources */,
 				02536D3D299BB158005F22ED /* SectionHeaderView.swift in Sources */,
 				02ADDA932988AE620088CD3C /* WABarsViewRepresentable.swift in Sources */,
